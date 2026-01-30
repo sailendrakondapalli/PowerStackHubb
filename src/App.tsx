@@ -51,18 +51,18 @@ const HomePage = () => {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/PowerStackHubb">
       <div className="min-h-screen bg-gray-50">
         <Header />
         
         <Routes>
-  <Route path="/" element={<HomePage />} />
-  <Route path="/post/:id" element={<PostDetailPage />} />
-  <Route path="/:category" element={<CategoryPage />} />
-  <Route path="/admin" element={<AdminDashboard />} />
-  <Route path="/auth/callback" element={<AuthCallback />} />
-  <Route path="/contact" element={<ContactForm />} />
-</Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/post/:id" element={<PostDetailPage />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/auth/callback" element={<AuthCallback />} />
+          <Route path="/contact" element={<ContactForm />} />
+          <Route path="/:category" element={<CategoryPage />} />
+        </Routes>
 
         <Footer />
       </div>

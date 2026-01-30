@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { User, LogOut, Menu } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 
@@ -11,20 +12,20 @@ const Header = () => {
         <div className="flex justify-between items-center h-16 gap-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 hover:text-teal-600 transition-colors whitespace-nowrap">
+            <Link to="/" className="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 hover:text-teal-600 transition-colors whitespace-nowrap">
               PowerStack<span className="text-teal-600">Hub</span>
-            </a>
+            </Link>
           </div>
 
           {/* Navigation - Hidden on small screens */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-gray-700 hover:text-teal-600 font-medium transition-colors">
+            <Link to="/" className="text-gray-700 hover:text-teal-600 font-medium transition-colors">
               Home
-            </a>
+            </Link>
             {isAdmin && (
-              <a href="/admin" className="text-gray-700 hover:text-teal-600 font-medium transition-colors">
+              <Link to="/admin" className="text-gray-700 hover:text-teal-600 font-medium transition-colors">
                 Admin
-              </a>
+              </Link>
             )}
           </nav>
 
